@@ -1,0 +1,14 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let n = 0b00000010100101000001111010011100
+    var reverseBits = function(n) {
+      // 解法一：暴力解
+      console.log(parseInt('0b'+n.toString(2).padStart(32,0).split('').reverse().join('')))
+      // console.log(n)
+      return n.toString(2).padStart(32,0).split('').reverse().join('')
+    };
+    console.log(reverseBits(n).toString(2))
+ </script>
+</html>

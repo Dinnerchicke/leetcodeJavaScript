@@ -1,0 +1,23 @@
+<html>
+ <body>
+ </body>
+ <script>
+  var x=0
+  var isPalindrome = function(x) {
+    // 解法一
+    if (x<0) return false
+    let str = x.toString()
+    console.log(str)
+    let list = str.split('')
+    console.log(list[list.length-1])
+    for(var i =0;i<Math.floor(list.length);i++){
+      if(list[i]!=list[list.length-i-1]){
+        return false
+      }
+      console.log(list[i],list[list.length-i-1])
+    }
+    return true
+  };
+  console.log(isPalindrome(x))
+ </script>
+</html>

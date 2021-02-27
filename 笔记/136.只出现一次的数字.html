@@ -1,0 +1,20 @@
+<html>
+ <body>
+ </body>
+ <script>
+  var nums = [4,1,2,1,2]
+  var singleNumber = function(nums) {
+    let list=[]
+    for(let i=0;i<nums.length;i++){
+      if(list[nums[i]]==undefined){
+        list[nums[i]]=1
+      }else{
+        list[nums[i]]++
+      }
+    }
+    list.filter(item=>(console.log(list[item]))).join('')
+    // return list.filter(item=>(list[item]==1,console.log(list[item]))).join('')
+  };
+  console.log(singleNumber(nums))
+ </script>
+</html>

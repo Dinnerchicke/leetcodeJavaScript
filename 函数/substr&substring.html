@@ -1,0 +1,30 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let str = 'this_is_str'
+
+    // substr(start,length),length可以为负数
+    // substring(start,end),end不能为负数,否则没有效果
+
+    console.log('substr----'+str.substr(1))
+    console.log('substring-'+str.substring(1))
+    console.log('------------------------------')
+
+    console.log('substr----'+str.substr(2))
+    console.log('substring-'+str.substring(2))
+    console.log('------------------------------')
+
+    console.log('substr----'+str.substr(0,2))
+    console.log('substring-'+str.substring(0,2))
+    console.log('------------------------------')
+
+    console.log('substr----'+str.substr(1,2))
+    console.log('substring-'+str.substring(1,2))
+    console.log('------------------------------')
+
+    console.log('substr----'+str.substr(-2))
+    console.log('substring-'+str.substring(-2))
+    console.log('------------------------------')
+ </script>
+</html>

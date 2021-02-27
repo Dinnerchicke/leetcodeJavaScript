@@ -1,0 +1,17 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let nums = [2,3,4,6,8]
+    // reduce相当于将每次原先的结果和现在的当前值进行计算，并返回结果
+    // 可以进行+、-、*、/等计算,reduce最后会返回综合结果
+    console.log(nums.reduce((prev,cur,index,arr)=>{
+      // console.log(prev,cur,index)
+      console.log('prev：上次调用的返回值'+prev)
+      console.log('cur：当前值'+cur)
+      console.log('index：当前值在数组中的索引'+index)
+      // reduce相当于将每次的结果相乘
+      return prev*cur
+    }))
+ </script>
+</html>

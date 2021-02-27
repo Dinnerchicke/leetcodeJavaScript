@@ -1,0 +1,39 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let nums = [3,2,3]
+    var majorityElement = function(nums) {
+      // 解法一
+      // var result = undefined
+      // let map = new Map()
+      // nums.forEach(item=>{
+      //   if(map.has(item)==false){
+      //     map.set(item,1)
+      //   } else{
+      //     let tmp = map.get(item)
+      //     tmp++
+      //     map.set(item,tmp)
+      //   }
+      // })
+      // map.forEach((value,key)=>{
+      //   if(value>=Math.ceil(nums.length/2)){
+      //     result = key
+      //   }
+      // })
+      // return result
+
+      // 解法二
+      let x = 0
+      let m = 0
+      for(let n of nums){
+        console.log('n:'+n)
+        if(m === 0) x = n
+        m += (x === n ? 1 : -1)
+        console.log('m:'+m)
+      }
+      return x
+    };
+    console.log(majorityElement(nums))
+ </script>
+</html>

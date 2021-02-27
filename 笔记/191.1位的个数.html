@@ -1,0 +1,19 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let n = 0b00000000000000000000000000001011
+    var hammingWeight = function(n) {
+      console.log(n)
+      let str = n.toString(2)
+      console.log(str)
+      let arr = str.split('')
+      let result = 0
+      arr.forEach(item=>{
+        if(item==1) result++
+      })
+      return result
+    };
+    console.log(hammingWeight(n))
+ </script>
+</html>

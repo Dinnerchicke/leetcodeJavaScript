@@ -1,0 +1,30 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let nums = [3,1,4,5]
+    nums[100] = 6
+    let obj = {
+      3:'a',
+      2:'b',
+      1:'c'
+    }
+    nums.prototype = function () {}
+    console.log('for in遍历的是可枚举属性,适合遍历对象')
+    for(let i in nums){
+      console.log(nums[i])
+    }
+    for(let i in obj){
+      console.log(i)
+    }
+    console.log('----------------------')
+    console.log('for of遍历的是元素值,适合遍历数组等有迭代器对象的结合')
+    for(let i of nums){
+      console.log(i)
+    }
+    // for of不能遍历非迭代类型
+    // for(let i of obj){
+    //   console.log(i)
+    // }
+ </script>
+</html>

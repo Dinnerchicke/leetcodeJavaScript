@@ -1,0 +1,56 @@
+<html>
+ <body>
+ </body>
+ <script>
+   console.log('与&:全才1')
+   console.log(0&0) // 0
+   console.log(1&1) // 1
+   console.log(0&1) // 0
+   console.log(1&0) // 0
+   console.log('----------------------')
+
+   console.log('或|:有1则1')
+   console.log(0|0) // 0
+   console.log(1|1) // 1
+   console.log(0|1) // 1
+   console.log(1|0) // 1
+   console.log('----------------------')
+
+   console.log('^异或:不同则1')
+   console.log(0^0) // 0
+   console.log(1^1) // 0
+   console.log(0^1) // 1
+   console.log(1^0) // 1
+   console.log('----------------------')
+
+   console.log('~非')
+   console.log(~0) // 1
+   console.log(~1) // 0
+   console.log('----------------------')
+
+   console.log('<<左移：用来平方')
+   console.log(2<<2)
+   console.log('----------------------')
+
+   console.log('右移：用来除二的次方，只能除正数')
+   console.log(100>>1)
+   console.log(100>>2)
+   console.log(100>>4)
+   console.log('----------------------')
+
+   console.log('2进制-1')
+   console.log((0b1110).toString(2))
+   console.log((0b1110-1).toString(2))
+   console.log('----------------------')
+
+   console.log('和1与：可以获得末尾的数')
+   console.log((0b11111101111).toString(2))
+   console.log(((0b110000111011)&0b111111111111).toString(2))
+   console.log(((0b110000111011)&0b1).toString(2))
+   console.log('----------------------')
+
+   console.log('二进制加减')
+   console.log((0b111+0b111).toString(2))
+
+ </script>
+</html>

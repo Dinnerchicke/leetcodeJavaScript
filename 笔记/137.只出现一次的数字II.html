@@ -1,0 +1,20 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let nums = [2,2,3,2]
+    var singleNumber = function(nums) {
+      let once = 0, twice = 0;
+      for (let x of nums) {
+        console.log('x:'+x)
+        once = (once ^ x) & (~twice);
+        console.log('once:'+once)
+        twice = (twice ^ x) & (~once);
+        console.log('twice:'+twice)
+      }
+      console.log('----------------------')
+      return once;
+    }
+    console.log(singleNumber(nums))
+ </script>
+</html>

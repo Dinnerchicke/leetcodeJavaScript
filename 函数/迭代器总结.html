@@ -1,0 +1,61 @@
+<html>
+ <body>
+ </body>
+ <script>
+    let nums = [3,5,100]
+    nums[100] = 10
+    let obj = {
+      '3':'n',
+      'n':3
+    }
+    // 1.for...in:适合遍历对象,可以使用continue和break
+    console.log('for...in')
+    for(let i in obj){
+      console.log(i)
+    }
+    console.log('----------------------')
+
+    // 2.for...of:适合遍历数组,可以使用continue和break
+    console.log('for...of')
+    for(let i of nums){
+      console.log(i)
+    }
+    console.log('----------------------')
+
+    // 3.forEach(),接受一个函数，对数组中每个元素使用该函数
+    console.log('forEach()')
+    let tmp=0
+    nums.forEach(item=>{
+      console.log(item)
+      tmp++
+    })
+    console.log(tmp)
+    console.log('----------------------')
+
+    // 4.every(),接受一个返回值为bool的函数，对每个元素使用该函数
+    // 如果都为true则true反之为false
+    console.log('every()')
+    console.log(nums.every(item=>item>3))
+    console.log('----------------------')
+
+    // 5.some(),同every,不同的是有一个为true则返回true
+    console.log('some()')
+    console.log(nums.some(item=>item>3))
+    console.log('----------------------')
+
+    // 6.reduce(),对数组中的值进行重复计算，即累加、累积、累减、累异或等
+    console.log('reduce()')
+    console.log(nums.reduce((pre,cur)=>pre+cur))
+    console.log('----------------------')
+
+    // 7.map(),类似forEach()，但是操作后会返回一个新数组，foreach不会
+    console.log('map()')
+    console.log(nums.map(item=>item++))
+    console.log('----------------------')
+
+    // 8.filter(),类似every()，最终返回一个全为true的新数组
+    console.log('filter()')
+    console.log(nums.filter(item=>item>3))
+    console.log(nums.filter(item=>item<2))
+ </script>
+</html>
