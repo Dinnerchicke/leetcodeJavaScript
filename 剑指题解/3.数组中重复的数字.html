@@ -1,0 +1,36 @@
+<html>
+  <body>
+  </body>
+  <script>
+    let nums = [3,3,1,2,54,3]
+
+    // 空 [+] 正常 大于2
+    var findRepeatNumber = function(nums) {
+      let numsMap = []
+      for(let key of nums) {
+        if (numsMap[key] === undefined) {
+          numsMap[key] = 1
+        }else {
+          return key // 现在肯定=2
+        }
+      }
+    };
+
+    var findRepeatNumber = function(nums) { // 当当前出现的数字跟对应下标出现的数字相同则判断有重复数字
+        for (let i = 0; i < nums.length; ++i) {
+            //检测下标为i的元素是否放在了位置i上
+            while ((num = nums[i]) !== i) {
+                // console.log(nums)
+                // console.log(num)
+                // console.log(nums[num])
+                // console.log(i)
+                if (num === nums[num]) {
+                    return num;
+                }
+                [nums[i], nums[num]] = [nums[num], nums[i]];
+            }
+        }
+    };
+    console.log(findRepeatNumber(nums))
+  </script>
+</html>

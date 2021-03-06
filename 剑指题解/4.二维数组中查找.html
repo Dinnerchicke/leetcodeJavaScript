@@ -1,0 +1,62 @@
+<html>
+  <body>
+  </body>
+  <script>
+    // 测试用例： 1.[] 2.正常
+    let array = [
+      [1,   4,  7, 11, 15],
+      [2,   5,  8, 12, 19],
+      [3,   6,  9, 16, 22],
+      [10, 13, 14, 17, 24],
+      [18, 21, 23, 26, 30]
+    ]
+    let array1 = []
+    let array2 = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]]
+    let target = 20
+
+    // 初代暴力遍历解
+    // var findNumberIn2DArray = function(matrix, target) {
+    //   if (matrix[0]===undefined) {
+    //     return false
+    //   }
+    //   let n = matrix[0].length
+    //   let m = matrix.length
+    //   for(let i = 0 ; i < m ; i++) {
+    //     if (target <= matrix[i][n-1]) {
+    //       for(let j = 0 ; j < n ; j++){
+    //         if (matrix[i][j] === target) {
+    //           return true
+    //         }
+    //       }
+    //     }
+    //   }
+    //   return false
+    // };
+
+    // 规律遍历解
+    var findNumberIn2DArray = function(matrix, target) {
+      if (matrix[0]===undefined) {
+        return false
+      }
+      let n = matrix[0].length
+      let m = matrix.length
+      for(let i = 0; i < n ;) {
+        if (target < matrix[i][n-1]) { // 行存在去除列
+          n--
+        }else if(target > matrix[i][n-1]) {
+          for(let j = 0; j < m ; j++){
+            console.log(matrix[i][j])
+            if (matrix[i][j] === target) {
+              return true
+            }
+          }
+          i++
+        }else{
+          return true
+        }
+      }
+      return false
+    }
+    console.log(findNumberIn2DArray(array1,target))
+  </script>
+</html>
